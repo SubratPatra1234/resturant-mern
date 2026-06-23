@@ -7,6 +7,8 @@ const userRoute = require("./routes/user.route")
 const adminRoute = require("./routes/admin.routes")
 const categoryRoutes = require("./routes/category.routes")
 const menuRoutes = require("./routes/menu.routes")
+const cartRoutes = require("./routes/cart.routes")
+const orderRoutes = require("./routes/order.routes")
 
 
 const app=express()
@@ -21,6 +23,8 @@ app.use("/api/auth",userRoute)
 app.use("/api/auth", adminRoute)
 app.use("/api/category",categoryRoutes)
 app.use("/api/menu",menuRoutes)
+app.use("/api/cart",cartRoutes)
+app.use("/api/orders",orderRoutes)
 
 
 app.get("/",(req,res)=>{
